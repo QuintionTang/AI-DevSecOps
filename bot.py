@@ -1,10 +1,11 @@
 from llama_index import StorageContext, ServiceContext, GPTVectorStoreIndex, LLMPredictor, PromptHelper, SimpleDirectoryReader, load_index_from_storage
 from langchain.chat_models import ChatOpenAI
 import gradio as gr
+from config import (OPENAI_API_KEY)
 import sys
 import os
 
-os.environ["OPENAI_API_KEY"] = ''
+os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
 
 def create_service_context():
